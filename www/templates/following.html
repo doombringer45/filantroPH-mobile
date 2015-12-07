@@ -1,0 +1,13 @@
+
+<ion-view view-title="Following">
+  <ion-content>
+	 <ion-list>
+    <div class="list">
+		<a ng-repeat="x in MyCharityList " class="item item-thumbnail-left" href="#/app/charitypage/{{x.id}}">
+		  <img ng-src="{{x.img}}">
+		  <h2>{{x.title}}</h2>
+		  <p>{{x.desc}}</p>	
+		</a>
+	</div>
+  </ion-content>
+</ion-view>

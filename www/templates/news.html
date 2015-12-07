@@ -1,0 +1,23 @@
+<ion-view view-title="news">
+  <ion-content ion-sticky>
+    <div  class="item item-divider tabs tabs-striped tabs-secondary tabs-icon-left sticky-menu-2" >
+				<a ng-click="showAbout()"class="tab-item sticky-menu-item tab-active" ng-class="{'tab-active' : activeInit == 1}">				
+				 Today's Top
+				</a>
+				<a ng-click="showHistory()"class="tab-item sticky-menu-item"  ng-class="{'tab-active' : active == 2}" >				  
+				 Trending
+				</a>
+				<a ng-click="showHistory()"class="tab-item sticky-menu-item"  ng-class="{'tab-active' : active == 2}" >				  
+				 Fresh
+				</a>					
+	</div>
+	<div class="list">
+		<a ng-repeat="article in newsArticles" class="item item-thumbnail-left" href="#/app/home">
+		  <img ng-src="{{article.thumbnail}}">
+		  <h2>{{article.title}}</h2>
+		  <p>{{article.date}}</p>
+		  <p>{{article.TeaserText}}</p>			
+		</a>
+	</div>
+  </ion-content>
+</ion-view>

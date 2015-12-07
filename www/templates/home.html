@@ -1,0 +1,109 @@
+<ion-view view-title="home">
+  <ion-content ion-sticky>
+	<div class="cards">
+		<div class="item item-divider dark white-bg">	
+			<center>
+				<a href="#/app/categories" class="text-pink"> 
+					<span class="bold text-xk ion-search">
+						Explore Charities
+					</span>
+				</a>
+			</center>
+		</div>
+		<div class="item item-divider dark white-bg">
+			  Featured Story
+			  <a href="#/app/stories" class="text-pink  btn-category"><span class="text-xs">See all</span> &nbsp;<i class="ion-chevron-right text-pink"></i></a>
+			</div>
+			<ion-slide-box on-slide-changed="slideHasChanged($index)" does-continue="false"  auto-play="true" slide-interval="6000"> 		
+				<ion-slide ng-repeat="j in FeaturedStory">
+				 <div class="row">
+					<div class="col">	
+						<img ng-src="{{j.img}}" class="full-image slider-image">
+					</div>
+					<div class="col">
+					   <h5>{{j.title}}</h5>
+						<p class="text-muted">{{j.desc}}</p>
+					</div>
+					<div style="clear:both;"></div>
+				</div>
+				</ion-slide>					
+			</ion-slide-box>		
+		
+		<!-- 
+		<div class="item item-image">
+				<ion-slide-box on-slide-changed="slideHasChanged($index)" does-continue="true" auto-play="true" slide-interval="4000">
+				  <ion-slide ng-repeat="images in homeSlider">
+					<div class="box"><img ng-src="{{images.img}}"></div>
+				  </ion-slide>
+				</ion-slide-box>
+		</div> -->
+	</div>
+<!-- 	<div class="list card home-slider">
+			<div class="item item-divider dark white-bg">
+			  Featured Story
+			  <a href="#/app/stories" class="text-pink  btn-category"><span class="text-xs">See all</span> &nbsp;<i class="ion-chevron-right text-pink"></i></a>
+			</div>
+			<ion-slide-box on-slide-changed="slideHasChanged($index)" does-continue="false"  auto-play="true" slide-interval="6000"> 		
+				<ion-slide ng-repeat="j in FeaturedStory">
+				 <div class="row">
+					<div class="col">	
+						<img ng-src="{{j.img}}" class="full-image slider-image">
+					</div>
+					<div class="col">
+					   <h5>{{j.title}}</h5>
+						<p class="text-muted">{{j.desc}}</p>
+					</div>
+					<div style="clear:both;"></div>
+				</div>
+				</ion-slide>					
+			</ion-slide-box>					
+    </div> -->
+	
+		
+	<div class="list card home-slider">		
+			<div class="item item-divider dark white-bg">
+			 Headlines
+			 <a href="#/app/news" class="positive btn-category">
+			 <span class="text-xs text-pink"> See all</span> &nbsp;<i class="ion-chevron-right text-pink"></i></a>
+			</div>
+			<ion-slide-box on-slide-changed="slideHasChanged($index)" does-continue="false"  auto-play="true" slide-interval="6500">		
+				<ion-slide ng-repeat="x in FeaturedNews">
+				<div class="row">
+					<div class="col">			
+						<img ng-src="{{x.img}}" class="full-image slider-image">
+						 <h3 class="home-slider-title">{{x.title}}</h3>
+					</div>
+				</div>
+				</ion-slide>					
+			</ion-slide-box>
+	</div>
+
+	<div class="list card home-slider">			
+			<div class="item item-divider dark white-bg">
+			 Activities
+			  <a href="#/app/campaigns" class="text-pink  btn-category">
+			  <span class="text-xs"> See all</span>  &nbsp;
+			  <i class="ion-chevron-right text-pink"></i></a>
+			</div>
+				<ion-slide-box on-slide-changed="slideHasChanged($index)" does-continue="true" auto-play="true" slide-interval="7000">
+				 <ion-slide ng-repeat="i in campaignSlider">
+					<div class="row">
+						<div class="col col-50">
+							<a href="#/app/campaigns"><img ng-src="{{i.img}}" class="full-image"></a>
+						</div>
+						<div class="col col-50">
+							<a href="{{i.url}}">
+							<h5>{{i.title}}</h5>
+							<p class="text-muted">
+								{{i.desc}}
+							</p>
+							</a>
+						</div>
+					</div>						
+				  </ion-slide> 
+				</ion-slide-box>			
+	</div>
+  </ion-content>
+</ion-view>
+
+

@@ -1,0 +1,23 @@
+<ion-view view-title="children">  
+    <ion-content>
+        <div class="cards">
+			<div class="item item-image">
+				<img src="img/banner-children.jpg"></img>
+			</div>
+		</div>
+		
+        <div class="list card padding" ng-repeat="x in lists">
+		<a href="#/app/charitypage/{{x.id}}" class="positive ">
+        <img class="char-logo img-thumb" ng-src="{{x.logo}}">
+            <div class="char-info">
+                <h3 class="char-name text-pink">
+				<i class="ion-chevron-right text-pink btn-category"></i>
+				{{x.name}}</h3>
+                <p class="dark">{{x.desc}}</p>
+			</div>
+			</a>
+        </div>
+  
+		
+    </ion-content>
+</ion-view>

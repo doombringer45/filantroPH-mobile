@@ -1,0 +1,84 @@
+<ion-view view-title="stories">
+  <ion-content ion-sticky>
+				
+  <div  class="item item-divider tabs tabs-striped tabs-secondary tabs-icon-left sticky-menu-2" >
+				<a ng-click="showAbout()"class="tab-item sticky-menu-item tab-active" ng-class="{'tab-active' : activeInit == 1}">				
+				 Top
+				</a>
+				<a ng-click="showHistory()"class="tab-item sticky-menu-item"  ng-class="{'tab-active' : active == 2}" >				  
+				 Trending
+				</a>
+				<a ng-click="showHistory()"class="tab-item sticky-menu-item"  ng-class="{'tab-active' : active == 2}" >				  
+				 Fresh
+				</a>					
+	</div>
+		
+		<ion-list>
+				  <ion-item class="item-read-animate item-avatar item-icon-right" type="item-text-wrap" href="#/tab/chats/{{chat.id}}">
+					<img src="img/camp1.jpg">
+					<h2>Meet Tina</h2>
+					<p class="text-muted">By: Gugma Sa Kabataan</p>
+					<p><i class="ion-eye dark"></i> 1023 &nbsp; &nbsp;&nbsp;
+					<i class="ion-heart assertive" ></i> 978</p>
+					<i class="ion-chevron-right right-absolute"></i>
+
+					<ion-option-button class="button-calm hot-pink">
+					  bookmark &nbsp;<i class="ion-bookmark"></i>
+					</ion-option-button>
+				  </ion-item>
+				  
+				  <ion-item class="item-read-animate item-avatar item-icon-right" type="item-text-wrap" href="#/tab/chats/{{chat.id}}">
+					<img src="img/camp2.jpg">
+					<h2>Si Lolo Tacio</h2>
+					<p class="text-muted">By: St. Joseph's Foster Home</p>
+					<p><i class="ion-eye dark"></i> 856 &nbsp; &nbsp;&nbsp;
+					<i class="ion-heart assertive" ></i> 782</p>
+					<i class="ion-chevron-right right-absolute"></i>
+
+					<ion-option-button class="button-calm hot-pink">
+					  bookmark &nbsp;<i class="ion-bookmark"></i>
+					</ion-option-button>
+				  </ion-item>
+				  
+				  <ion-item class="item-read-animate item-avatar item-icon-right" type="item-text-wrap" href="#/tab/chats/{{chat.id}}">
+					<img src="img/camp3.jpg">
+					<h2>Sleeping on the Streets</h2>
+					<p class="text-muted">By: House of Hope</p>
+					<p><i class="ion-eye dark"></i> 623 &nbsp; &nbsp;&nbsp;
+					<i class="ion-heart assertive" ></i> 512</p>
+					<i class="ion-chevron-right right-absolute"></i>
+
+					<ion-option-button class="button-calm hot-pink">
+					  bookmark &nbsp;<i class="ion-bookmark"></i>
+					</ion-option-button>
+				  </ion-item>
+				  
+				  <ion-item class="item-read-animate item-avatar item-icon-right" type="item-text-wrap" href="#/tab/chats/{{chat.id}}">
+					<img src="img/stark.jpg">
+					<h2>Fighting Leukaemia</h2>
+					<p class="text-muted">By: Bantay Bata 163</p>
+					<p><i class="ion-eye dark"></i> 550 &nbsp; &nbsp;&nbsp;
+					<i class="ion-heart assertive" ></i> 412</p>
+					<i class="ion-chevron-right right-absolute"></i>
+
+					<ion-option-button class="button-calm hot-pink">
+					  bookmark &nbsp;<i class="ion-bookmark"></i>
+					</ion-option-button>
+				  </ion-item>
+				  
+				  <ion-item class="item-read-animate item-avatar item-icon-right" type="item-text-wrap" href="#/tab/chats/{{chat.id}}">
+					<img src="img/charity2.jpg">
+					<h2>Batang Lansangan</h2>
+					<p class="text-muted">By: Gugma Sa Kabataan</p>
+					<p><i class="ion-eye dark"></i> 432 &nbsp; &nbsp;&nbsp;
+					<i class="ion-heart assertive" ></i> 313</p>
+					<i class="ion-chevron-right right-absolute"></i>
+
+					<ion-option-button class="button-calm hot-pink">
+					  bookmark &nbsp;<i class="ion-bookmark"></i>
+					</ion-option-button>
+				  </ion-item>
+			</ion-list>
+  </ion-content>
+  
+</ion-view>

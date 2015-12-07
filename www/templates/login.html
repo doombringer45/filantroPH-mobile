@@ -1,0 +1,37 @@
+
+<ion-view class="login-background">
+  
+  <ion-content >
+  <img src="img/logo.png" class="logo"></img>
+  <span class="brand-title">FilantroPH</span>
+  <span class="brand-desc">Building Communities Through Impact</span>
+<div class="login">   
+   <form ng-submit="doLogin()">
+   <div class="list list-inset login-form">
+		  <center>
+		    
+                   <h3>LOGIN</h3>
+				   <label class="item item-input">
+                    <input type="email" class="item item-input" placeholder="Email" ng-model="loginData.email"><br>
+                    </label>
+					<label class="item item-input">
+					<input type="password"  placeholder="Password" ng-model="loginData.password"><br>
+                    </label>
+					<button type="submit" class="button button-block button-positive">LOGIN</button>
+					
+					
+		</center>
+    </form>
+	
+					<a href="#/signup" ng-click="closeLogin()">
+					<div class="button button-full button-energized" >
+					<em class="dark">SIGN UP</em>
+					</div>
+					</a>
+
+</div>
+</div>
+
+  </ion-content>
+</ion--modal-view>
+

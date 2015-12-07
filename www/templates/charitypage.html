@@ -1,0 +1,303 @@
+<ion-view view-title="{{charity.name}}">
+    <ion-content ion-sticky>
+		<div class="cards">
+			<div class="item charity-page-header">
+				<img ng-src="{{charity.logo}}" class="charitypage-logo">
+				<div class="charity-page-details">
+				<button class="button button-small] button-clear button-stable ion-plus charity-page-btn-follow"> follow</button>
+				<h2 class="padding-left padding-top charity-page-title white bold">{{charity.name}} </h2>
+				<p class="padding-left text-muted white"><i class="icon ion-ios-location"></i> {{charity.street}} </p>
+				<p class="padding-left text-muted white">{{charity.city}}, {{charity.zip}}</p>
+				<p class="padding-left text-muted white">{{charity.state}}, {{charity.country}}</p>
+				</div>
+
+				<div style="clear:both" class="padding-bottom padding-bottom"></div>
+			<center>
+				<a href="#/app/charitypage/donation">
+					<button class="button button-full button-energized">
+						<span class="text-donate">Donate Now!</span>
+					</button>
+				</a>
+			</center>	
+			</div>
+			
+			<div  class="item item-divider tabs tabs-striped tabs-secondary tabs-icon-left sticky-menu" >
+				<a ng-click="showInfo()"  class="tab-item sticky-menu-item" ng-class="{'tab-active' : activeInit == 1}" id="info-btn" >				
+				 About
+				</a>
+				<a ng-click="showStories()" class="tab-item sticky-menu-item" ng-class="{'tab-active' : active == 4}" id="stories-btn" >
+				  Stories
+				</a>
+				<a ng-click="showNews()" class="tab-item sticky-menu-item" ng-class="{'tab-active' : active == 3}" id="news-btn" >
+				 News
+				</a>
+				<a ng-click="showProj()" class="tab-item sticky-menu-item" ng-class="{'tab-active' : active == 2}" id="projects-btn" >				  
+				  Projects
+				</a>				
+				<a ng-click="showContact()" class="tab-item sticky-menu-item" ng-class="{'tab-active' : active == 5}" id="donate-page-btn" >
+				  Contact
+				</a>
+			</div>
+		</div>
+			 
+		
+		<section ng-hide="info">
+				<div class="item item-body">
+					<p class="text-muted">video <i class="ion-ios-videocam right"></i></p>
+					<video class="charity-page-video" controls><source src="{{charity.video}}" type="video/mp4"></source></video>
+				</div>
+				<div class="item item-body">
+					<h3>{{charity.name}} needs: </h3>
+					<ul>
+						<li><i class="ion-checkmark calm"></i> Monetary funds</li>
+						<li><i class="ion-checkmark calm"></i> Rice</li>
+						<li><i class="ion-checkmark calm"></i> School Supplies</li>
+						<li><i class="ion-checkmark calm"></i> Books</li>
+					</ul>
+			  </div>
+			  <div class="item item-body">
+				<h3><i class="ion-coffee dark"></i> About us</h3>
+					<p>{{charity.about}}</p>
+			  </div>
+			  <div class="item item-body">
+				<h3><i class="ion-fireball assertive"></i> Mission</h3>
+				<p>{{charity.mission}}</p>
+			  </div>
+			  <div class="item item-body">
+				<h3><i class="ion-trophy energized"></i> Vision</h3>
+					<p>{{charity.vision}}</p>
+			  </div>
+			
+		</section>
+		
+		<section ng-hide="projects" >
+
+			<div class="list card">			
+			  <div class="item ">				
+				<h2 class="bold uppercase"> Current Project <i class="ion-speakerphone orange"></i></h2>
+				<p>Start : <span class=" balanced">{{charity.currProjStart}}</span></p>
+				<p>Until : <span  class="assertive">{{charity.currProjEnd}}</span></p>
+			  </div>
+			  <div class="item item-body">
+			  <a href="#">
+			  <h3><center>{{charity.currentProjectTitle}}</center></h3>
+				<img class="full-image" ng-src="{{charity.currProjImage}}">		
+				<p>
+				  {{charity.currProjDetails}}
+				</p>
+				</a>
+			  </div>			 
+				<button class="button button-full button-outline button-assertive">
+					<i class="icon ion-ios-star"></i> I want to support this! <i class="icon ion-ios-star"></i>
+				</button>
+			</div>
+			
+			<div class="cards">
+				<div class="item item-body">
+				<h3> <i class="ion-ribbon-a energized"></i> Projects Completed</h3>
+				</div>
+					<div class="list">
+
+						<a class="item item-thumbnail-left" href="#">
+						  <img src="img/camp2.jpg">
+						  <h2>blabla for a cause</h2>
+						  <p>Started : August 1, 2015</p>
+						  <p>Ended : August 29, 2015</p>
+						</a>
+						<a class="item item-thumbnail-left" href="#">
+						  <img src="img/camp2.jpg">
+						  <h2>blabla for a cause</h2>
+						  <p>Started at : August 1, 2015</p>
+						  <p>Ended : August 29, 2015</p>
+						</a>
+						<a class="item item-thumbnail-left" href="#">
+						  <img src="img/camp2.jpg">
+						  <h2>blabla for a cause</h2>
+						  <p>Started : August 1, 2015</p>
+						  <p>Ended : August 29, 2015</p>
+						</a>
+						<a class="item item-thumbnail-left" href="#">
+						  <img src="img/camp2.jpg">
+						  <h2>blabla for a cause</h2>
+						  <p>Started : August 1, 2015</p>
+						  <p>Ended : August 29, 2015</p>
+						</a>
+						<a class="item item-thumbnail-left" href="#">
+						  <img src="img/camp2.jpg">
+						  <h2>blabla for a cause</h2>
+						  <p>Started : August 1, 2015</p>
+						  <p>Ended : August 29, 2015</p>
+						</a>
+					</div>
+							
+			</div>
+		</section>
+		
+		<section ng-hide="news" id="charity-page-news" >
+					<div class="item">
+						<h2 class="bold uppercase">Latest Updates <i class="ion-social-rss orange"></i></h2>
+					</div>
+					
+				<div class="row cards">					
+					<div class="col col-50">
+						<a href="#" class="dark"> 						
+						  <center>
+							<img src="img/camp2.jpg" class="charity-page-news-image">
+						  </center> 												
+						</a>
+					</div>			
+					<div class="col col-50">
+						<a href="#"> 
+						  <h4>Project Teddy's Success</h4>
+						  <p class="text-muted"><i class="ion-ios-calendar-outline"></i> 9/10/2015, CDO CITY</p>
+						<p class="dark">
+				  This is a "Facebook" styled Card. The header is created from a Thumbnail List item,
+				  the content is from a card-body consisting of an image and paragraph text. The footer
+				  consists of tabs, icons aligned left, within the card-footer.
+						</p>
+						<p class="positive right">Read</p>
+						</a>
+					</div>
+					
+				</div>
+			
+					<div class="item">
+						<h3 class="bold uppercase"><i class="ion-ios-clock-outline"></i> Recent </h3>
+					</div>
+
+<ion-scroll direction="xy" has-bouncing="false" zooming="false">
+				
+				<div class="row" on-drag-up="onDragUp()"  on-drag-down="onDragDown()">
+						<div class="col col-50 charity-news-scroll">
+							<a href="#/app/campaigns">
+							<img src="img/camp4.jpg" class="full-image charity-news-slide-img">
+							<h5>Speak Out</h5>
+							 <p class="text-muted"><i class="ion-ios-calendar-outline"></i> 9/10/2015, CDO CITY</p>
+							<p class="text-muted">
+								bacon cheese burger hotdog donut cupcake
+								nutella empanada pizza milk tea							
+							</p>
+							<p class="positive right">Read</p>
+							</a>
+						</div>
+						<div class="col col-50 charity-news-scroll">
+							<a href="#/app/home">
+							<img src="img/camp4.jpg" class="full-image charity-news-slide-img">
+							<h5>Adopt a dog</h5>
+							 <p class="text-muted"><i class="ion-ios-calendar-outline"></i> 9/10/2015, CDO CITY</p>
+							<p class="text-muted">
+								bacon cheese burger hotdog donut cupcake
+								nutella empanada pizza milk tea							
+							</p>
+							<p class="positive right">Read</p>
+							</a>
+						</div>
+						<div class="col col-50 charity-news-scroll">
+							<a href="#/app/campaigns">
+							<img src="img/camp4.jpg" class="full-image charity-news-slide-img">
+							<h5>Adopt a dog</h5>
+							 <p class="text-muted"><i class="ion-ios-calendar-outline"></i> 9/10/2015, CDO CITY</p>
+							<p class="text-muted">
+								bacon cheese burger hotdog donut cupcake
+								nutella empanada pizza milk tea							
+							</p>
+							<p class="positive right">Read</p>
+							</a>
+						</div>
+						<div class="col col-50 charity-news-scroll">
+							<a href="#/app/campaigns">
+							<img src="img/camp4.jpg" class="full-image charity-news-slide-img">
+							<h5>Adopt a dog</h5>
+							 <p class="text-muted"><i class="ion-ios-calendar-outline"></i> 9/10/2015, CDO CITY</p>
+							<p class="text-muted">
+								bacon cheese burger hotdog donut cupcake
+								nutella empanada pizza milk tea							
+							</p>
+							<p class="positive right">Read</p>
+							</a>
+						</div>
+						<div class="col col-50 charity-news-scroll">
+							<a href="#/app/campaigns">
+							<img src="img/camp4.jpg" class="full-image charity-news-slide-img">
+							<h5>Adopt a dog</h5>
+							 <p class="text-muted"><i class="ion-ios-calendar-outline"></i> 9/10/2015, CDO CITY</p>
+							<p class="text-muted">
+								bacon cheese burger hotdog donut cupcake
+								nutella empanada pizza milk tea							
+							</p>
+							<p class="positive right">Read</p>
+							</a>
+						</div>
+				
+				</div>
+</ion-scroll>
+				  
+			
+				
+						
+				<div class="item">
+				<h3><i class="ion-calendar calm"></i> Find posts by date </h3>
+				<br>
+					<label class="item item-input">
+					
+					  <span class="input-label">From: </span>
+					  <input type="date">
+					</label>
+				</div>
+		</section>
+		
+		<section ng-hide="stories"  >
+				
+	<ion-list>
+				  <ion-item class="item-read-animate item-avatar item-icon-right" type="item-text-wrap" href="#/tab/chats/{{chat.id}}">
+					<img src="img/camp1.jpg">
+					<h2>Meet Tina</h2>
+					<p class="text-muted">By: Gugma Sa Kabataan</p>
+					<p><i class="ion-eye dark"></i> 1023 &nbsp; &nbsp;&nbsp;
+					<i class="ion-heart assertive" ></i> 978</p>
+					<i class="ion-chevron-right right-absolute"></i>
+
+					<ion-option-button class="button-calm hot-pink">
+					  bookmark &nbsp;<i class="ion-bookmark"></i>
+					</ion-option-button>
+				  </ion-item>
+				  
+				  <ion-item class="item-read-animate item-avatar item-icon-right" type="item-text-wrap" href="#/tab/chats/{{chat.id}}">
+					<img src="img/charity2.jpg">
+					<h2>Batang Lansangan</h2>
+					<p class="text-muted">By: Gugma Sa Kabataan</p>
+					<p><i class="ion-eye dark"></i> 432 &nbsp; &nbsp;&nbsp;
+					<i class="ion-heart assertive" ></i> 313</p>
+					<i class="ion-chevron-right right-absolute"></i>
+
+					<ion-option-button class="button-calm hot-pink">
+					  bookmark &nbsp;<i class="ion-bookmark"></i>
+					</ion-option-button>
+				  </ion-item>
+			</ion-list>
+		</section>
+		
+		<section ng-hide="contact">
+		
+			<div class="list">
+			<h2 class="message-title">Ping us! <i class="ion-email"></i></h2>
+			  <label class="item item-input">
+				<span class="input-label bold">Subject:</span>
+				<input type="text" placeholder="What do you want to say?">
+			  </label>
+			  <br>
+			  <label class="item item-input">
+			  <span class="input-label bold">Message:</span>
+			  </label>
+			  <label class="item item-input">	
+				<textarea rows="8" cols="20" placeholder="Say something .." id="charity-page-message-box">
+				</textarea>			
+			  </label>
+			 <br>
+			  <button type="submit" class="button button-calm right">Send <i class="ion-ios-paperplane"></i></button>
+				
+			</div>
+		</section>
+	
+	</ion-content>
+</ion-view>
