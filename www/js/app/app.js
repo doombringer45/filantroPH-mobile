@@ -6,8 +6,9 @@
 // 'starter.controllers' is found in controllers.js
 angular.module('starter', ['ionic', 'ion-sticky',
 							'starter.services','news.services' ,'following.services','charity.services','subCat.services',
+              'story.services',
 							'starter.controllers','news.controllers','following.controllers', 
-							'subCategory.controllers','CharityTabs.controllers','Profile.controllers'])
+							'subCategory.controllers','CharityTabs.controllers','Profile.controllers', 'starter.storiesCtrl'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -64,7 +65,8 @@ angular.module('starter', ['ionic', 'ion-sticky',
       views: {
         'menuContent': {
           templateUrl: 'templates/stories.html'
-        }
+        },
+      controller : 'storiesCtrl'
       }
     })
 	
