@@ -1,6 +1,10 @@
 angular.module('starter.controllers', [])
 
+<<<<<<< HEAD
+.controller('AppCtrl', function($scope, $ionicModal, $timeout, $ionicPopup, $state, UserList, home, stories) {
+=======
 .controller('AppCtrl', function($scope, $ionicModal, $timeout, $ionicPopup, $state,  UserList, home) {
+>>>>>>> origin/master
 
   // With the new view caching in Ionic, Controllers are only called
   // when they are recreated or on app start, instead of every page change.
@@ -91,7 +95,7 @@ angular.module('starter.controllers', [])
   
   $scope.homeSlider = home.getSlider();
   $scope.FeaturedNews = home.getFeaturedNews();
-  $scope.FeaturedStory = home.getFeaturedStory();
+  $scope.FeaturedStory = stories.getAll();
   $scope.campaignSlider = home.getCampaigns();
   
   

@@ -6,8 +6,10 @@
 // 'starter.controllers' is found in controllers.js
 angular.module('starter', ['ionic', 'ion-sticky',
 							'starter.services','news.services' ,'following.services','charity.services','subCat.services',
+              'story.services',
 							'starter.controllers','news.controllers','following.controllers', 
-							'subCategory.controllers','CharityTabs.controllers','Profile.controllers','uiGmapgoogle-maps'])
+							'subCategory.controllers','CharityTabs.controllers','Profile.controllers', 'starter.storiesCtrl', 'uiGmapgoogle-maps',
+							'subCategory.controllers','CharityTabs.controllers','Profile.controllers'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -73,7 +75,8 @@ angular.module('starter', ['ionic', 'ion-sticky',
       url: '/stories',
       views: {
         'menuContent': {
-          templateUrl: 'templates/stories.html'
+          templateUrl: 'templates/stories.html',
+        controller : 'storiesCtrl'
         }
       }
     })
@@ -127,10 +130,11 @@ angular.module('starter', ['ionic', 'ion-sticky',
     })
 	
 	.state('app.story-post', {
-      url: '/story-post',
+      url: '/story-post/:storyid',
       views: {
         'menuContent': {
-          templateUrl: 'templates/story-post.html'
+          templateUrl: 'templates/story-post.html',
+          controller : 'storiesCtrl'
         }
       }
     })
