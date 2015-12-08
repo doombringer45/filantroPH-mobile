@@ -21,6 +21,7 @@ angular.module('story.services', [])
 				“Why don’t you take your son to a good doctor?”The old man smiled and said…“I did and we are just coming from the hospital, my son was blind from birth, he just got his eyes today.
 
 				Every single person on the planet has a story. Don’t judge people before you truly know them. The truth might surprise you.',
+				
 				datetime : '9:00 AM GMT+8 12/19/15',
 				state : 'Top',
 				views : 120,
