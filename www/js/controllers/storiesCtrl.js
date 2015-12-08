@@ -1,6 +1,6 @@
 angular.module('starter.storiesCtrl', ['story.services'])
 
-.controller ( 'storiesCtrl', function ( $scope, stories, $window, $timeout ) ) {
+.controller ( 'storiesCtrl', function ( $scope, stories, $window, $timeout, $stateParams, $state ) ) {
 	$scope.Math = Math;
 	var charities = ['House of Hope', 'Bantay Bata', 'House of joy'];
 
@@ -23,4 +23,13 @@ angular.module('starter.storiesCtrl', ['story.services'])
 	}
 
 	$scope.stories = stories.getAll();
+
+	$scope.gotoStoryPost = function ( id ) {
+		$state.go('app.story-post', {storyid : id});
+	}
+
+
+	// For story-post
+
+	$scope.story = stories.getSpecific( $stateParams.storyid );
 }

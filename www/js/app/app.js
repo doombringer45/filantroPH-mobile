@@ -75,9 +75,9 @@ angular.module('starter', ['ionic', 'ion-sticky',
       url: '/stories',
       views: {
         'menuContent': {
-          templateUrl: 'templates/stories.html'
-        },
-      controller : 'storiesCtrl'
+          templateUrl: 'templates/stories.html',
+        controller : 'storiesCtrl'
+        }
       }
     })
 	
@@ -130,10 +130,11 @@ angular.module('starter', ['ionic', 'ion-sticky',
     })
 	
 	.state('app.story-post', {
-      url: '/story-post',
+      url: '/story-post/:storyid',
       views: {
         'menuContent': {
-          templateUrl: 'templates/story-post.html'
+          templateUrl: 'templates/story-post.html',
+          controller : 'storiesCtrl'
         }
       }
     })
