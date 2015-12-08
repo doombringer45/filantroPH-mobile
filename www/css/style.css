@@ -1,5 +1,5 @@
 /* Empty. Add your own CSS if you like */
-
+.angular-google-map-container{min-height:400px; width:auto;}
 a{text-decoration: none; color:white;}
 @import url(https://fonts.googleapis.com/css?family=Oswald&subset=latin,latin-ext);
 em{font-weight:900; }

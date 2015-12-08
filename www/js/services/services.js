@@ -93,14 +93,14 @@ angular.module('starter.services', [])
 	{
 		id:1,
 		img:'img/stark.jpg',
-		title:'Tales from the street',
-		desc:'The quick brown fox jumps over the lazy dog.'
+		title:'Everyone Has a Story in Life',
+		desc:'A 24 year old boy seeing out from the train’s window shouted…'
 		
 	},{
 		id:2,
 		img:'img/stark.jpg',
 		title:'Tales from the street',
-		desc:'The quick brown fox jumps over the lazy dog.'
+		desc:''
 		
 	}
 	];

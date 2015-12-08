@@ -8,7 +8,8 @@ angular.module('starter', ['ionic', 'ion-sticky',
 							'starter.services','news.services' ,'following.services','charity.services','subCat.services',
               'story.services',
 							'starter.controllers','news.controllers','following.controllers', 
-							'subCategory.controllers','CharityTabs.controllers','Profile.controllers', 'starter.storiesCtrl'])
+							'subCategory.controllers','CharityTabs.controllers','Profile.controllers', 'starter.storiesCtrl', 'uiGmapgoogle-maps',
+							'subCategory.controllers','CharityTabs.controllers','Profile.controllers'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -47,6 +48,16 @@ angular.module('starter', ['ionic', 'ion-sticky',
     views: {
       'menuContent': {
         templateUrl: 'templates/search.html'
+      }
+    }
+  })
+  
+	.state('app.map', {
+    url: '/map',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/charity-map.html',
+		controller: 'AppCtrl'
       }
     }
   })
