@@ -1,6 +1,6 @@
 angular.module('starter.controllers', [])
 
-.controller('AppCtrl', function($scope, $ionicModal, $timeout, $ionicPopup, $state, $cordovaSQLite, UserList, home) {
+.controller('AppCtrl', function($scope, $ionicModal, $timeout, $ionicPopup, $state,  UserList, home) {
 
   // With the new view caching in Ionic, Controllers are only called
   // when they are recreated or on app start, instead of every page change.
@@ -86,6 +86,8 @@ angular.module('starter.controllers', [])
 		});
 	}
   };
+  
+  $scope.map = { center: { latitude: 45, longitude: -73 }, zoom: 8 };
   
   $scope.homeSlider = home.getSlider();
   $scope.FeaturedNews = home.getFeaturedNews();

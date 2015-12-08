@@ -3,12 +3,12 @@ angular.module('subCat.services', [])
 var list=[{
 			id:0, 
 			name: 'Gugma sa kabataan',
-			desc:'The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog.',
+			desc:'a charity that helps street children, the marginalized and children who cannot afford to go to school',
 			logo: 'img/gsk.jpg'
 		},{
 			id:1, 
 			name: 'Bantay Bata',
-			desc:'The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog.',
+			desc:'Ta child welfare program launched in 1997 to protect disadvantaged and at-risk children through a nationwide network of social services. ',
 			logo: 'img/163.jpg'
 		}];
 		
