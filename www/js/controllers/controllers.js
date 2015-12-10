@@ -1,6 +1,6 @@
 angular.module('starter.controllers', [])
 
-.controller('AppCtrl', function($scope, $ionicModal, $timeout, $ionicPopup, $state, UserList, home, stories) {
+.controller('AppCtrl', function($scope, $ionicModal, $timeout, $ionicPopup, $state, UserList, home, stories, $window) {
 
   // With the new view caching in Ionic, Controllers are only called
   // when they are recreated or on app start, instead of every page change.
@@ -62,6 +62,8 @@ angular.module('starter.controllers', [])
   
   
 	$scope.logout =function() {
+	 $window.localStorage.removeItem('bookmark');
+	 console.log($window.localStorage['bookmark'] || '[]');
 	 $scope.modal.show();
 	};
 

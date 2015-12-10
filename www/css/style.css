@@ -6,7 +6,7 @@ em{font-weight:900; }
 .hot-pink{background-color:#FF1550 !important;}
 .cool-blue{background-color:#25A2CC}
 .text-pink{color:#FF1550 !important;}
-
+.ellipsis{text-overflow:clip}
 .transparent{background-color:transparent;}
 .white-bg{background-color:white; border-color:white;}
 .text-muted{color:gray; font-size:12px}
