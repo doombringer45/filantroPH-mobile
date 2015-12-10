@@ -8,7 +8,7 @@ var list=[{
 		},{
 			id:1, 
 			name: 'Bantay Bata',
-			desc:'Ta child welfare program launched in 1997 to protect disadvantaged and at-risk children through a nationwide network of social services. ',
+			desc:'a child welfare program launched in 1997 to protect disadvantaged and at-risk children through a nationwide network of social services. ',
 			logo: 'img/163.jpg'
 		}];
 		
