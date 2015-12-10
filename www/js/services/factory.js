@@ -69,7 +69,7 @@ angular.module('story.services', [])
 				return null;
 			},
 			getById : function ( ids ) {
-				var response =[];
+				var response = [];
 				for (var i = 0; i < stories.length; i++) {
 					if ( ids.indexOf(stories[i].id) ) {
 						response.push(stories[i]);
