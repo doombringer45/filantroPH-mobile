@@ -67,7 +67,18 @@
 		</section>
 
 		<section ng-hide="Bookmark">
-		
+		<ion-list>
+			<ion-item ng-hide="hasBookmark"> No Bookmarks</ion-item>
+
+		  <ion-item class="item-read-animate item-avatar item-icon-right" type="item-text-wrap" ng-show="hasBookmark" ng-repeat="bookmark in bookmarks" ng-click="gotoStoryPost(bookmark.id)">
+			<img ng-src="{{bookmark.img}}">
+			<h2></h2>
+			<p class="text-muted">By: <span ng-bind="{{bookmark.charity}}"></span></p>
+			<p><i class="ion-eye dark"></i> {{bookmark.views}} &nbsp; &nbsp;&nbsp;
+			<i class="ion-heart assertive" ></i> {{bookmark.loves}}</p>
+		  </ion-item>
+			</ion-list>
+				
 		</section>
 	</div>
   </ion-content>

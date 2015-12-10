@@ -9,7 +9,7 @@ angular.module('starter', ['ionic', 'ion-sticky',
               'story.services',
 							'starter.controllers','news.controllers','following.controllers', 
 							'subCategory.controllers','CharityTabs.controllers','Profile.controllers', 'starter.storiesCtrl', 'uiGmapgoogle-maps',
-							'subCategory.controllers','CharityTabs.controllers','Profile.controllers'])
+							'subCategory.controllers','CharityTabs.controllers', 'Profile.controllers'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
