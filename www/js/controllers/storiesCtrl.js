@@ -18,7 +18,7 @@ angular.module('starter.storiesCtrl', ['story.services'])
 		$window.localStorage.removeItem('bookmark');
 		tempBookmark.push(id);
 		$window.localStorage['bookmark'] = JSON.stringify(tempBookmark);
-
+		console.log(tempBookmark);
 		// ionic modal
 		// kung dili ma i.close ang modal, mo close automatic in 1.5 secs
 		

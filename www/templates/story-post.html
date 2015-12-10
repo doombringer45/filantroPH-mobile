@@ -1,8 +1,8 @@
-<ion-view view-title="story-post-id">
+<ion-view view-title="{{story.title}}">
 	<ion-content >
 		 <div class="cards">
 			<div class="item item-image">
-				<img src="img/post1.jpg" class="story-banner"></img>
+				<img src="{{story.postImg}}" class="story-banner"></img>
 			</div>
 			<div class="padding-left padding-right">
 			<h2 ng-bind="story.title"></h2>
@@ -11,7 +11,11 @@
 				<p class="justify text-xl">
 					{{story.content}}
 				</p>
+				
+				<br>
+			<!-- <p class="text-muted ellipsis">**Disclaimer: Any stories or videos presented in this app are solely those of the author and do not necessarily represent those of the company. Charities of FilantroPH are expressly required not to make defamatory statements and not to infringe or authorize any infringement of copyright or any other legal right by email communications. Any such communication is contrary to company policy and outside the scope of the employment of the individual concerned. The company will not accept any liability in respect of such communication, and the employee responsible will be personally liable for any damages or other liability arising. </p> -->
 			</div>
+				
 		</div>
 		
 		<div class="item tabs tabs-secondary tabs-icon-left">
