@@ -14,10 +14,10 @@
 	</div>
 		
 		<ion-list>
-				  <ion-item class="item-read-animate item-avatar item-icon-right" type="item-text-wrap" ng-repeat="story in stories" ng-click="gotoStoryPost(story.id)">
+				  <ion-item class="item-read-animate item-avatar item-icon-right" type="item-text-wrap" ng-repeat="story in stories">
 					<img ng-src="{{story.img}}">
-					<h2></h2>
-					<p class="text-muted">By: <span ng-bind="random()"></span></p>
+					<h2 ng-bind="story.title" ng-click="gotoStoryPost(story.id)"></h2>
+					<p class="text-muted">By: <span ng-bind="charity[$index]"></span></p>
 					<p><i class="ion-eye dark"></i> {{story.views}} &nbsp; &nbsp;&nbsp;
 					<i class="ion-heart assertive" ></i> {{story.loves}}</p>
 					<i class="ion-chevron-right right-absolute"></i>
