@@ -1,11 +1,16 @@
 angular.module('starter.storiesCtrl', ['story.services'])
 
-.controller ( 'storiesCtrl', function ( $scope, stories, $window, $timeout, $stateParams, $state ) ) {
+.controller( 'storiesCtrl', function ( $scope, stories, $window, $timeout, $stateParams, $state ) {
 	$scope.Math = Math;
+	$scope.stories = stories.getAll();
+	
 	var charities = ['House of Hope', 'Bantay Bata', 'House of joy'];
-
-	$scope.random = function () {
-		return charities[Math.floor(Math.random() * charities.length)];
+	
+	$scope.charity = ['House of Joy'];
+	
+	for(var i = 0; i < $scope.stories.length; i++){
+		var temp = charities[Math.floor(Math.random() * charities.length)];
+		$scope.charity.push(temp);
 	}
 	
 	$scope.bookmark = function ( id ) {
@@ -22,7 +27,6 @@ angular.module('starter.storiesCtrl', ['story.services'])
 			// }, 1500);
 	}
 
-	$scope.stories = stories.getAll();
 
 	$scope.gotoStoryPost = function ( id ) {
 		$state.go('app.story-post', {storyid : id});
@@ -32,4 +36,4 @@ angular.module('starter.storiesCtrl', ['story.services'])
 	// For story-post
 
 	$scope.story = stories.getSpecific( $stateParams.storyid );
-}
+})
