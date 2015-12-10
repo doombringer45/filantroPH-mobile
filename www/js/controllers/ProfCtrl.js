@@ -1,6 +1,6 @@
 angular.module('Profile.controllers', [])
 
-.controller('profileCtrl', function($scope, $window, stories) {	
+.controller('profileCtrl', function($scope, $window, $state, stories) {	
 		$scope.about=false;
 		$scope.history=true;
 		$scope.Bookmark=true;
