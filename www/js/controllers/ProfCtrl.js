@@ -1,6 +1,6 @@
 angular.module('Profile.controllers', [])
 
-.controller('profileCtrl', function($scope) {	
+.controller('profileCtrl', function($scope, $window, stories) {	
 		$scope.about=false;
 		$scope.history=true;
 		$scope.Bookmark=true;
@@ -24,11 +24,23 @@ angular.module('Profile.controllers', [])
 		};
 		
 	$scope.showBookmark=function(){
-		 $scope.active = 3;
+		$scope.hasBookmark = false;
+		var savedBookmark = JSON.parse($window.localStorage['bookmark'] || '[]');
+		if( savedBookmark != [] ) {
+			$scope.bookmarks = stories.getById( savedBookmark );
+			$scope.hasBookmark = true;
+		}
+		else { $scope.hasBookmark = false; }
+
+		$scope.active = 3;
 		$scope.activeInit =0;
 		$scope.history=true;
 		$scope.Bookmark=false;
 		$scope.about=true;
 		};
-		
+	
+	
+	$scope.gotoStoryPost = function ( id ) {
+		$state.go('app.story-post', {storyid : id});
+	}
 });

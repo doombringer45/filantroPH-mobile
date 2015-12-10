@@ -9,9 +9,17 @@ angular.module('starter.storiesCtrl', ['story.services'])
 	}
 	
 	$scope.bookmark = function ( id ) {
+		var exist = false;
 		var tempBookmark = JSON.parse($window.localStorage['bookmark'] || '[]');
 		$window.localStorage.removeItem('bookmark');
-		tempBookmark.push(id);
+		for (var i = 0; i < tempBookmark.length; i++) {
+			if(tempBookmark[i] == id) {
+				exist = true;
+			}
+		}
+		if( !exist ) {
+			tempBookmark.push(id);	
+		}
 		$window.localStorage['bookmark'] = JSON.stringify(tempBookmark);
 
 		// ionic modal
