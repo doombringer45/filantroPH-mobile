@@ -25,8 +25,8 @@ angular.module('Profile.controllers', [])
 		
 	$scope.showBookmark=function(){
 		$scope.hasBookmark = false;
-		var savedBookmark = JSON.parse($window.localStorage['bookmark'] || '[]');
-		if( savedBookmark != [] ) {
+		var savedBookmark = JSON.parse($window.localStorage['bookmark'] || '{}}');
+		if( savedBookmark != {} ) {
 			$scope.bookmarks = stories.getById( savedBookmark );
 			$scope.hasBookmark = true;
 		}

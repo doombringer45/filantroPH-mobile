@@ -250,33 +250,23 @@
 		
 		<section ng-hide="stories"  >
 				
-	<ion-list>
-				  <ion-item class="item-read-animate item-avatar item-icon-right" type="item-text-wrap" href="#/app/story-post">
-					<img src="img/camp1.jpg">
-					<h2>Meet Tina</h2>
-					<p class="text-muted">By: Gugma Sa Kabataan</p>
-					<p><i class="ion-eye dark"></i> 1023 &nbsp; &nbsp;&nbsp;
-					<i class="ion-heart assertive" ></i> 978</p>
+			<ion-list>
+				  <ion-item class="item-read-animate item-avatar item-icon-right" type="item-text-wrap" ng-repeat="story in storiesData">
+					<img ng-src="{{story.img}}">
+					<span ng-click="gotoStoryPost(story.id)">
+					<h2 ng-bind="story.title" ></h2>
+					<p class="text-muted">By: <span ng-bind="story.charity"></span></p>
+					<p><i class="ion-eye dark"></i> {{story.views}} &nbsp; &nbsp;&nbsp;
+					<i class="ion-heart assertive" ></i> {{story.loves}}</p>
 					<i class="ion-chevron-right right-absolute"></i>
+					</span>
 
-					<ion-option-button class="button-calm hot-pink">
-					  bookmark &nbsp;<i class="ion-bookmark"></i>
-					</ion-option-button>
-				  </ion-item>
-				  
-				  <ion-item class="item-read-animate item-avatar item-icon-right" type="item-text-wrap" href="#/app/story-post">
-					<img src="img/charity2.jpg">
-					<h2>Batang Lansangan</h2>
-					<p class="text-muted">By: Gugma Sa Kabataan</p>
-					<p><i class="ion-eye dark"></i> 432 &nbsp; &nbsp;&nbsp;
-					<i class="ion-heart assertive" ></i> 313</p>
-					<i class="ion-chevron-right right-absolute"></i>
-
-					<ion-option-button class="button-calm hot-pink">
+					<ion-option-button class="button-calm hot-pink" ng-click="bookmark(story.id)">
 					  bookmark &nbsp;<i class="ion-bookmark"></i>
 					</ion-option-button>
 				  </ion-item>
 			</ion-list>
+
 		</section>
 		
 		<section ng-hide="contact">

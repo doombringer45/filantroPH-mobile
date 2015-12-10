@@ -19,7 +19,7 @@ angular.module('story.services', [])
 			{
 				id : 1,
 				title : 'Shake off Your Problems',
-				charity : 'Bantay Bata',
+				charity : 'Bantay Bata 163',
 				img : 'img/163.jpg',
 				postImg: 'img/donkey.jpg',
 				desc : 'The quick brown fox jumps over the lazy dog.',
@@ -33,7 +33,7 @@ angular.module('story.services', [])
 			{
 				id : 2,
 				title : 'Lorem ipsum dolor',
-				charity : 'Gugma sa kabataan',
+				charity : 'Gugma sa Kabataan',
 				img : 'img/camp1.jpg',
 				desc : 'The quick brown fox jumps over the lazy dog.',
 				content :  'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
@@ -73,10 +73,24 @@ angular.module('story.services', [])
 			getById : function ( ids ) {
 				var response = [];
 				for (var i = 0; i < stories.length; i++) {
-					if ( ids.indexOf(stories[i].id) ) {
-						response.push(stories[i]);
+					for(var x = 0; x < ids.length; x++) {
+						if(stories[i].id == ids[x]) {
+							response.push(stories[i]);
+						}
 					}
 				}
+				return response;
+			},
+			getByCharity : function ( name ) {
+
+				var response = [];
+				for (var i = 0; i < stories.length; i++) {
+					if( stories[i].charity == name ) {
+						response.push(stories[i]);
+						console.log('Naa');
+					}
+				}
+				console.log('Processed');
 				return response;
 			},
 			getBySate : function ( state ) {
